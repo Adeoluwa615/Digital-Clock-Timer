@@ -35,6 +35,7 @@ body {
     background-color: grey;
     color: #fff;
     cursor: pointer;
+    transition: 0.5s;
 }
 #start-btn{
     width: 100px;
@@ -46,6 +47,7 @@ body {
     background-color: #4CAF50;
     color: #fff;
     cursor: pointer;
+    transition: 0.5s;
    
 }
 #stop-btn{
@@ -58,6 +60,7 @@ body {
     background-color: red;
     color: #fff;
     cursor: pointer; 
+    transition: 0.5s;
    
 }
 
