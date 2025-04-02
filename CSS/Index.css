@@ -111,7 +111,7 @@ button:disabled {
         /* border: 1px solid black; */
 } 
  } 
-
+ 
 @media(max-width:400px){
     #digital{
         margin: auto;
