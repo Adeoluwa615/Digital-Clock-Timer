@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital Clock/Timer</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <h1 id="digital">Digital Clock/Timer</h1>
-    <div class="clock-container">
-      <h1 id="clock">00:00:00</h1>
-      <button id="start-btn">Start</button>
-      <button id="stop-btn" disabled>Stop</button>
-      <button id="reset-btn">Reset</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Timer</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="timer-container">
+        <h1>Digital Timer</h1>
+        <div class="controls">
+            <input type="number" id="hours" min="0" max="23" value="0" placeholder="HH">
+            <span>:</span>
+            <input type="number" id="minutes" min="0" max="59" value="0" placeholder="MM">
+            <span>:</span>
+            <input type="number" id="seconds" min="0" max="59" value="5" placeholder="SS">
+        </div>
+        <div class="timer-display" id="display">00:00:00</div>
+        <div class="actions">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn" disabled>Stop</button>
+            <button id="resetBtn">Reset</button>
+        </div>
     </div>
+
     <script src="./assets/js/script.js"></script>
-  </body>
+</body>
 </html>
