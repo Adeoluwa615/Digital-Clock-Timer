@@ -11,7 +11,8 @@ body {
 .clock-container {
     border: 1px solid black;
     border-radius: 20px;
-    background-color: black;
+    background-color: white;
+    box-shadow: 15px 15px 15px 15px black;
     width: 80%;
     margin: 50px auto;
     text-align: center;
@@ -159,7 +160,8 @@ button:disabled {
 @media(max-width:600px){.clock-container {
     border: 1px solid black;
     border-radius: 20px;
-    background-color: black;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px black;
     width: 90%;
     margin: 30px auto;
     text-align: center;
