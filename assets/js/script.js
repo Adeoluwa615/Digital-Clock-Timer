@@ -8,9 +8,9 @@ const stopBtn = document.getElementById('stopBtn');
 const resetBtn = document.getElementById('resetBtn');
 
 // Timer variables
-let totalSeconds = 5; // Initial timer time (5 seconds)
-let timerInterval = null; // To store the timer interval
-let isRunning = false; // Flag to track if the timer is running
+let totalSeconds = 5; 
+let timerInterval = null; 
+let isRunning = false;
 
 // Initialize the display
 updateDisplay();
@@ -30,11 +30,11 @@ resetBtn.addEventListener('click', resetTimer);
 
 // Function to make sure the input values are within valid ranges
 function validateInput(input) {
-    const value = parseInt(input.value) || 0; // Default to 0 if input is not a number
+    const value = parseInt(input.value) || 0; 
     if (input.id === 'hours') {
-        input.value = Math.max(0, Math.min(23, value)); // Hours should be between 0 and 23
+        input.value = Math.max(0, Math.min(23, value)); 
     } else {
-        input.value = Math.max(0, Math.min(59, value)); // Minutes and seconds should be between 0 and 59
+        input.value = Math.max(0, Math.min(59, value)); 
     }
 }
 
@@ -57,26 +57,26 @@ function updateDisplay() {
 
 // Start the timer
 function startTimer() {
-    if (isRunning) return; // Don't start the timer if it's already running
+    if (isRunning) return; 
     
     // If the timer is at 0, set it based on input values
     if (totalSeconds === 0) {
         updateDisplayFromInputs();
-        if (totalSeconds === 0) return; // Don't start if it's still 0
+        if (totalSeconds === 0) return; 
     }
     
     isRunning = true;
-    startBtn.disabled = true; // Disable the start button
-    stopBtn.disabled = false; // Enable the stop button
+    startBtn.disabled = true; 
+    stopBtn.disabled = false;
     
     // Decrease totalSeconds by 1 every second
     timerInterval = setInterval(() => {
         if (totalSeconds <= 0) {
-            clearInterval(timerInterval); // Stop the timer when it reaches 0
+            clearInterval(timerInterval); 
             isRunning = false;
             alert("Timer finished!");
-            startBtn.disabled = false; // Enable the start button again
-            stopBtn.disabled = true; // Disable the stop button
+            startBtn.disabled = false; 
+            stopBtn.disabled = true; 
             return;
         }
         
@@ -87,15 +87,15 @@ function startTimer() {
 
 // Stop the timer
 function stopTimer() {
-    if (!isRunning) return; // Don't stop if the timer isn't running
-    clearInterval(timerInterval); // Stop the interval
-    isRunning = false; // Update the state
-    startBtn.disabled = false; // Enable the start button
-    stopBtn.disabled = true; // Disable the stop button
+    if (!isRunning) return; 
+    clearInterval(timerInterval); 
+    isRunning = false; 
+    startBtn.disabled = false; 
+    stopBtn.disabled = true; 
 }
 
 // Reset the timer to the initial input values
 function resetTimer() {
-    stopTimer(); // Stop the timer if it's running
-    updateDisplayFromInputs(); // Reset the display to input values
+    stopTimer(); 
+    updateDisplayFromInputs(); 
 }
