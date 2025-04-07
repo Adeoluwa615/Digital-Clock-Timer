@@ -9,13 +9,14 @@ body {
     background-color: #f5f5f5;
 }
 .timer-container {
-    background-color: white;
+    background-color: whitesmoke;
     padding: 30px 60px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px grey;
     text-align: center;
 }
 .timer-display {
+    color: red;
     font-size: 4rem;
     margin: 20px 0;
     font-family: monospace;
@@ -34,20 +35,59 @@ input {
     border: 1px solid black;
     font-weight: 700;
 }
-button {
+#startBtn{
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: darkgreen;
     color: white;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-button:hover {
-    background-color: #45a049;
+#stopBtn{
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
-button:disabled {
+
+#resetBtn{
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#startBtn:hover {
+    background-color:green;
+}
+#stopBtn:hover{
+    background-color: red;
+}
+#resetBtn:hover{
+    background-color: darkgray;
+}
+
+
+#stopBtn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    color: #000;
+}
+#startBtn:disabled{
+    background-color: #cccccc;
+    cursor: not-allowed;
+    color: #000;
+}
+#resetBtn:disabled{
     background-color: #cccccc;
     cursor: not-allowed;
     color: #000;
